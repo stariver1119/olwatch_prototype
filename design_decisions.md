@@ -34,6 +34,16 @@ This document records key UI/UX decisions and design principles for the OLWatch 
     - **Accent 3 (Dark)**: `#263056` (Dark Blue - Card Backgrounds, Hover States)
 - **Rationale**: To create an immersive, premium dark mode experience with a cohesive blue identity.
 
+## 5. Video Player Page Design
+- **Decision**: **Immersive Dark Blue UI**
+- **Details**:
+    - **Player Background**: `#000000` (Pure black for focus).
+    - **Info Area**: Keep default background `#16151D`.
+    - **Action Buttons (Next Ep, Share)**: Use `Primary Color (#5CA6CE)` for emphasis.
+    - **Meta Info (Tags, Date)**: `Secondary Color (#5A5B9F)` text or subtle badges.
+    - **Header**: Auto-hide on playback, overlay on touch (semi-transparent black).
+- **Rationale**: Use brand colors as accents without distracting from the video.
+
 ---
 
 # 디자인 결정 사항
@@ -71,3 +81,13 @@ This document records key UI/UX decisions and design principles for the OLWatch 
     - **강조 2 (Secondary)**: `#5A5B9F` (차분한 블루/퍼플 - 부제목, 보조 액션)
     - **강조 3 (Dark)**: `#263056` (다크 블루 - 카드 배경, 호버 상태)
 - **이유**: 통일감 있는 블루 아이덴티티로 몰입감 있고 고급스러운 다크 모드 경험을 제공하기 위함입니다.
+
+## 5. 영상 재생 페이지 디자인
+- **결정**: **몰입형 다크 블루 UI**
+- **상세**:
+    - **플레이어 배경**: `#000000` (영상 집중을 위해 완전 블랙).
+    - **정보 영역**: 기본 배경 `#16151D` 유지.
+    - **액션 버튼 (다음 화, 공유 등)**: `Primary Color (#5CA6CE)` 사용하여 강조.
+    - **메타 정보 (태그, 날짜)**: `Secondary Color (#5A5B9F)` 텍스트 또는 은은한 배지.
+    - **헤더**: 영상 재생 시 자동 숨김, 터치 시 오버레이 (반투명 블랙).
+- **이유**: 영상 시청 경험을 방해하지 않으면서도 브랜드 컬러를 포인트로 활용.

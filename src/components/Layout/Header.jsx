@@ -5,8 +5,8 @@ const Header = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    // Only show back button if not on home page
-    const showBackButton = location.pathname !== '/';
+    // Only show back button if not on home page and not on watch page (watch page has its own overlay)
+    const showBackButton = location.pathname !== '/' && !location.pathname.startsWith('/watch/');
 
     if (!showBackButton) return null;
 

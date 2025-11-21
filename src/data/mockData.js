@@ -6,6 +6,7 @@ export const mockSeries = {
   thumbnailUrl: 'https://img.youtube.com/vi/Ke90Tje7VS0/maxresdefault.jpg',
   totalVideos: 3,
   totalViews: '15.2만',
+  tags: ['React', 'Lecture'],
   videos: [
     {
       id: 'Ke90Tje7VS0',

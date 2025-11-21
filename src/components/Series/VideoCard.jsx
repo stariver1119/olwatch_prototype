@@ -7,13 +7,16 @@ const VideoCard = ({ video, index }) => {
     return (
         <Link to={`/watch/${video.id}`} className="video-card-link">
             <div className="video-card">
-                <img src={thumbnailUrl} alt={video.title} className="video-thumbnail" />
+                <div className="video-index-container">
+                    <span className="video-index-large">{index + 1}</span>
+                </div>
+                <div className="video-thumbnail-wrapper">
+                    <img src={thumbnailUrl} alt={video.title} className="video-thumbnail" />
+                </div>
                 <div className="video-info">
-                    <div className="video-header">
-                        <h3 className="video-title">{index + 1}. {video.title}</h3>
-                        <span className="video-duration">{video.duration}</span>
-                    </div>
+                    <h3 className="video-title">{video.title}</h3>
                     <p className="video-description">{video.description}</p>
+                    <span className="video-duration">{video.duration}</span>
                 </div>
             </div>
         </Link>

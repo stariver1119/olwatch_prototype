@@ -16,9 +16,13 @@ This document records key UI/UX decisions and design principles for the OLWatch 
 - **Rationale**: Focus on content consumption; minimize distractions during playback.
 
 ## 3. List Style
-- **Decision**: **Option B (Card Style)**
-- **Details**: Full-width thumbnails with text content below them.
-- **Rationale**: Provides a more visual, engaging experience similar to modern social media feeds.
+- **Decision**: **Option C (Compact List with Large Index)**
+- **Details**:
+    - **Layout**: Small thumbnail on the left, text content on the right.
+    - **Index Number**: Large, stylized number (background effect) placed prominently (e.g., behind or next to the thumbnail).
+    - **Separators**: Horizontal lines separating each video item.
+    - **Typography**: Smaller font size for titles.
+- **Rationale**: To mimic the "Episode List" aesthetic (like Netflix/Disney+ episode selectors) rather than a social feed.
 
 ## 4. Color Palette
 - **Decision**: **Dark Blue Theme**
@@ -50,9 +54,13 @@ This document records key UI/UX decisions and design principles for the OLWatch 
 - **이유**: 콘텐츠 소비에 집중하고 재생 중 방해 요소를 최소화하기 위함입니다.
 
 ## 3. 리스트 스타일
-- **결정**: **B안 (카드형)**
-- **상세**: 가로로 꽉 차는 썸네일과 그 아래에 텍스트가 배치되는 형태.
-- **이유**: 최신 소셜 미디어 피드와 유사한, 시각적으로 더 매력적인 경험을 제공하기 위함입니다.
+- **결정**: **C안 (큰 인덱스가 있는 컴팩트 리스트)**
+- **상세**:
+    - **레이아웃**: 왼쪽에 작은 썸네일, 오른쪽에 텍스트 콘텐츠.
+    - **인덱스 번호**: 크고 스타일리시한 번호(배경 효과)를 눈에 띄게 배치 (예: 썸네일 뒤나 옆).
+    - **구분선**: 각 영상 항목을 구분하는 가로선.
+    - **타이포그래피**: 제목 폰트 크기를 작게 조정.
+- **이유**: 소셜 피드보다는 "에피소드 목록"의 미학(넷플릭스/디즈니+ 에피소드 선택 화면 등)을 따르기 위함입니다.
 
 ## 4. 컬러 팔레트
 - **결정**: **다크 블루 테마**

@@ -1,6 +1,6 @@
-# OLWatch (올와치)
+# OLWatch
 
-**YouTube 크리에이터 시리즈를 위한 몰입형 정주행 플랫폼**
+**Immersive Binge-Watching Platform for YouTube Creator Series**
 
 ---
 
@@ -129,9 +129,9 @@ src/
 
 ---
 
-# OLWatch
+# OLWatch (올와치)
 
-**Immersive Binge-Watching Platform for YouTube Creator Series**
+**YouTube 크리에이터 시리즈를 위한 몰입형 정주행 플랫폼**
 
 ---
 

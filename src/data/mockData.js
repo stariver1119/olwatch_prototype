@@ -1,33 +1,40 @@
 export const mockSeries = {
   id: 'series-001',
-  title: 'React.js 완전 정복',
-  creator: 'Code Master',
-  description: 'React의 기초부터 심화까지, 실무에 바로 쓰는 리액트 강의 시리즈입니다.',
-  thumbnailUrl: 'https://img.youtube.com/vi/Ke90Tje7VS0/maxresdefault.jpg',
-  totalVideos: 3,
-  totalViews: '15.2만',
-  tags: ['React', 'Lecture'],
+  title: '26살 대학교 입시 도전기',
+  creator: '느린스퍼트',
+  description: '늦은 재도전, 그리고 실패에 대한 이야기.',
+  thumbnailUrl: 'https://i.ytimg.com/vi/HzFB_j4yuik/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBINUR_QRT_Z_cp7MnmCVzOcCy1kg',
+  totalVideos: 4,
+  totalViews: '1.5k',
+  tags: ['입시', '대학', '면접'],
   videos: [
     {
-      id: 'Ke90Tje7VS0',
-      title: '1. React란 무엇인가? (100초 정리)',
-      description: 'React의 핵심 개념과 탄생 배경을 100초 만에 빠르게 훑어봅니다. 컴포넌트 기반 아키텍처의 장점을 이해해보세요.',
-      duration: '1:40',
+      id: 'HzFB_j4yuik',
+      title: '[1화] 대학가려고 수학에 정석 풀어본 후기',
+      description: '대학가려고 수학에 정석 풀어본 후기',
+      duration: '5:12',
       order: 1
     },
     {
-      id: 'SqcY0GlETPk',
-      title: '2. React 기초 문법 및 컴포넌트',
-      description: 'JSX 문법, Props, State 등 React 개발에 필수적인 기초 문법을 예제와 함께 배웁니다.',
-      duration: '15:30',
+      id: 'fb9S3--ggis',
+      title: '[2화] 26살에 대학교 입학 준비하려는 이유',
+      description: '26살에 대학교 입학 준비하려는 이유',
+      duration: '14:56',
       order: 2
     },
     {
-      id: 'dGcsHMXbSOA',
-      title: '3. React Hooks 완벽 가이드',
-      description: 'useState, useEffect부터 커스텀 훅까지, 함수형 컴포넌트의 핵심인 Hooks를 마스터합니다.',
-      duration: '20:15',
+      id: 'bOWQtuXn5Hc',
+      title: '[3화] 26살에 대학교 면접 준비중 드는 생각들',
+      description: '26살에 대학교 면접 준비중 드는 생각들',
+      duration: '3:29',
       order: 3
+    },
+    {
+      id: 'TZLwatwlltw',
+      title: '[4화] 26살에 대학교 입시 도전하기, 여기서 마칩니다.',
+      description: '26살에 대학교 입시 도전하기, 여기서 마칩니다.',
+      duration: '40:46',
+      order: 4
     }
   ]
 };

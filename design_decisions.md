@@ -90,4 +90,29 @@ This document records key UI/UX decisions and design principles for the OLWatch 
     - **액션 버튼 (다음 화, 공유 등)**: `Primary Color (#5CA6CE)` 사용하여 강조.
     - **메타 정보 (태그, 날짜)**: `Secondary Color (#5A5B9F)` 텍스트 또는 은은한 배지.
     - **헤더**: 영상 재생 시 자동 숨김, 터치 시 오버레이 (반투명 블랙).
+    - **헤더**: 영상 재생 시 자동 숨김, 터치 시 오버레이 (반투명 블랙).
 - **이유**: 영상 시청 경험을 방해하지 않으면서도 브랜드 컬러를 포인트로 활용.
+
+## 6. Routing Strategy / 라우팅 전략
+- **Decision**: **HashRouter (#)**
+- **Details**: 
+    - URLs will include a hash (e.g., `/#/slowspurt`).
+    - Explicitly chose `HashRouter` over `BrowserRouter`.
+- **Rationale**: 
+    - **GitHub Pages Compatibility**: GitHub Pages does not support single-page app (SPA) HTML5 history mode (clean URLs) natively. It returns 404 for unknown paths.
+    - **Reliability**: Using the hash fragment prevents server-side 404 errors during direct access or page refreshes without requiring complex 404 hacks.
+    - **Consistency**: Ensures the app loads correctly on the static hosting environment.
+
+## 6. 라우팅 전략
+- **결정**: **HashRouter (# 사용)**
+- **상세**:
+    - URL에 해시가 포함됩니다 (예: `/#/slowspurt`).
+    - `BrowserRouter` 대신 `HashRouter`를 사용하기로 명시적 결정.
+- **이유**:
+    - **GitHub Pages 호환성**: GitHub Pages는 기본적으로 SPA의 HTML5 history 모드(깔끔한 URL)를 지원하지 않으며, 알 수 없는 경로에 대해 404 에러를 반환합니다.
+    - **안정성**: 해시를 사용하면 서버 설정을 건드리지 않고도 새로고침이나 직접 접속 시 404 에러를 방지할 수 있습니다.
+    - **일관성**: 정적 호스팅 환경에서 앱이 항상 올바르게 로드되도록 보장합니다.
+    - **Note**: This is a **Temporary Strategy** for the prototype phase (up to v0.5.x).
+        - **Plan**: Migrate to **Firebase Hosting** (or similar) in **v0.6.0** to enable `BrowserRouter` (Clean URLs) with proper server-side configuration.
+    - **참고**: 이는 프로토타입 단계(v0.5.x까지)를 위한 **임시 전략**입니다.
+        - **계획**: **v0.6.0**에서 **Firebase Hosting** 등으로 이전하며 서버 설정을 통해 깔끔한 URL(`BrowserRouter`)을 지원할 예정입니다.

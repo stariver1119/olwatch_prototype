@@ -45,6 +45,22 @@ This document summarizes the current state of the OLWatch prototype and outlines
 - **Goal**: landing page implementation.
 - **목표**: 랜딩페이지 구현.
 
+### 🔹 v0.6.0: 파이어베이스 서버로 진행
+- **Goal**: firebase server implementation.
+- **목표**: 파이어베이스 서버 구현.
+
+### 🔹 v0.6.1: HashRouter (#) 삭제
+- **Goal**: HashRouter (#) deletion.
+- **목표**: HashRouter (#) 삭제.
+
+### 🔹 v0.7.0: 구글 애널리틱스 적용
+- **Goal**: google analytics implementation.
+- **목표**: 구글 애널리틱스 적용.
+
+### 🔹 v0.8.0: 구글 애널리틱스 적용
+- **Goal**: google analytics implementation.
+- **목표**: 구글 애널리틱스 적용.
+
 ### 🔹 Backlog / 백로그 (Postponed)
 - **v0.1.2: Adaptive UI / 반응형 UI**
     - Tablet UI support (Postponed).

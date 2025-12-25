@@ -404,8 +404,161 @@ body {
   cursor: pointer;
 }
 
-.player-video-description {
-  color: #ddd;
-  line-height: 1.6;
-  font-size: 1rem;
+/* Creator Home Page */
+.creator-page-wrapper {
+  padding-top: 60px;
+  /* Space for fixed app header */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.creator-header {
+  padding: 0 20px 30px 20px;
+  background-color: transparent;
+}
+
+.creator-profile-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.creator-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--text-secondary);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.creator-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.creator-name {
+  font-size: 1.4rem;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.creator-bio {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.creator-stats {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}
+
+/* Separator Line */
+.content-separator {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 0 20px;
+}
+
+.creator-content {
+  padding: 25px 20px;
+  flex: 1;
+}
+
+/* Section Title */
+.creator-content .section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-left: 0;
+  color: var(--text-color);
+}
+
+/* Series Grid (Netflix-like) */
+.series-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 columns on mobile is standard */
+  gap: 15px;
+}
+
+.series-card {
+  cursor: pointer;
+  background-color: transparent;
+  width: 100%;
+}
+
+.series-thumbnail-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  background-color: var(--card-bg);
+}
+
+.series-thumbnail-wrapper .series-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.series-card:hover .series-thumbnail {
+  transform: scale(1.05);
+}
+
+.series-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.series-card:hover .series-overlay {
+  opacity: 1;
+}
+
+.play-icon {
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.series-card-info {
+  padding: 0;
+}
+
+.series-card-title {
+  font-size: 0.9rem;
+  margin: 0 0 4px 0;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.series-card-meta {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin: 0;
 }

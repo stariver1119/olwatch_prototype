@@ -83,7 +83,8 @@ export const creatorProfiles = {
     avatarUrl: 'https://yt3.ggpht.com/iQEfIYNBUJ-XOtGtBYdwOG6jiLaQZnCxq3HRnGu6PiHsm1iRsdx-8jc0OD_jbb3LvIz49yuv=s88-c-k-c0x00ffffff-no-rj',
     bio: '느려보여도 꾸준히 나아가다보면, 달려야 할 때가 옵니다.',
     stats: {
-      subscribers: '1.2K',
+      totalViews: '1.6k',
+      subscribers: '150',
       totalSeries: 2
     }
   }

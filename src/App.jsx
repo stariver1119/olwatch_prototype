@@ -5,12 +5,14 @@ import VideoPlayerPage from './pages/VideoPlayerPage';
 import MobileContainer from './components/Layout/MobileContainer';
 import Header from './components/Layout/Header';
 
+import CreatorHomePage from './pages/CreatorHomePage';
+
 function App() {
   return (
     <MobileContainer>
-      <Header />
       <Routes>
         <Route path="/" element={<SeriesPlaylistPage />} />
+        <Route path="/:creatorId" element={<CreatorHomePage />} />
         <Route path="/:creatorId/:seriesId" element={<SeriesPlaylistPage />} />
         <Route path="/watch/:videoId" element={<VideoPlayerPage />} />
       </Routes>

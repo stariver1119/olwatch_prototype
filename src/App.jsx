@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import SeriesPlaylistPage from './pages/SeriesPlaylistPage';
 import VideoPlayerPage from './pages/VideoPlayerPage';
 import MobileContainer from './components/Layout/MobileContainer';
@@ -11,7 +11,7 @@ function App() {
   return (
     <MobileContainer>
       <Routes>
-        <Route path="/" element={<SeriesPlaylistPage />} />
+        <Route path="/" element={<Navigate to="/slowspurt" replace />} />
         <Route path="/:creatorId" element={<CreatorHomePage />} />
         <Route path="/:creatorId/:seriesId" element={<SeriesPlaylistPage />} />
         <Route path="/watch/:videoId" element={<VideoPlayerPage />} />

@@ -11,6 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<SeriesPlaylistPage />} />
+        <Route path="/:creatorId/:seriesId" element={<SeriesPlaylistPage />} />
         <Route path="/watch/:videoId" element={<VideoPlayerPage />} />
       </Routes>
     </MobileContainer>

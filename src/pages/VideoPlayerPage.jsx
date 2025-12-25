@@ -1,20 +1,25 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import YouTube from 'react-youtube';
-import { mockSeries } from '../data/mockData';
+import { getSeriesByVideoId } from '../data/mockData';
 
 const VideoPlayerPage = () => {
     const { videoId } = useParams();
     const navigate = useNavigate();
     const [video, setVideo] = useState(null);
+    const [currentSeries, setCurrentSeries] = useState(null);
     const [showHeader, setShowHeader] = useState(true);
     const [isPlaying, setIsPlaying] = useState(false);
 
-    // Find video data
+    // Find video data and parent series
     useEffect(() => {
-        const foundVideo = mockSeries.videos.find(v => v.id === videoId);
-        if (foundVideo) {
-            setVideo(foundVideo);
+        const parentSeries = getSeriesByVideoId(videoId);
+        if (parentSeries) {
+            setCurrentSeries(parentSeries);
+            const foundVideo = parentSeries.videos.find(v => v.id === videoId);
+            if (foundVideo) {
+                setVideo(foundVideo);
+            }
         }
     }, [videoId]);
 
@@ -40,15 +45,15 @@ const VideoPlayerPage = () => {
     };
 
     const handleNextEpisode = () => {
-        if (!video) return;
-        const currentIndex = mockSeries.videos.findIndex(v => v.id === video.id);
-        const nextVideo = mockSeries.videos[currentIndex + 1];
+        if (!video || !currentSeries) return;
+        const currentIndex = currentSeries.videos.findIndex(v => v.id === video.id);
+        const nextVideo = currentSeries.videos[currentIndex + 1];
         if (nextVideo) {
             navigate(`/watch/${nextVideo.id}`);
         }
     };
 
-    const hasNextEpisode = video && mockSeries.videos.findIndex(v => v.id === video.id) < mockSeries.videos.length - 1;
+    const hasNextEpisode = video && currentSeries && currentSeries.videos.findIndex(v => v.id === video.id) < currentSeries.videos.length - 1;
 
     const handleInteraction = () => {
         setShowHeader(true);
@@ -90,7 +95,7 @@ const VideoPlayerPage = () => {
             {/* Video Details */}
             <div className="video-details-container">
                 <div className="video-meta-top">
-                    {mockSeries.tags.map((tag, index) => (
+                    {currentSeries && currentSeries.tags.map((tag, index) => (
                         <span key={index} className="video-tag">#{tag}</span>
                     ))}
                 </div>

@@ -29,6 +29,22 @@ This document summarizes the current state of the OLWatch prototype and outlines
 - **Goal**: Implement the Editing Page.
 - **목표**: 에디팅 페이지 제작.
 
+### 🔹 v0.3.1: Editing Page / 에디팅 페이지 pc버전 UI 구현
+- **Goal**: Implement the Editing Page.
+- **목표**: 에디팅 페이지 pc버전 UI 구현.
+
+### 🔹 v0.4.0: 로그인 회원가입 시스템 구현
+- **Goal**: login and signup system implementation.
+- **목표**: 로그인 회원가입 시스템 구현.
+
+### 🔹 v0.4.1: 로그인 회원가입 시스템 구현 db까지
+- **Goal**: login and signup system database implementation.
+- **목표**: 로그인 회원가입 시스템 db구현.
+
+### 🔹 v0.5.0: 랜딩페이지 구현
+- **Goal**: landing page implementation.
+- **목표**: 랜딩페이지 구현.
+
 ### 🔹 Backlog / 백로그 (Postponed)
 - **v0.1.2: Adaptive UI / 반응형 UI**
     - Tablet UI support (Postponed).

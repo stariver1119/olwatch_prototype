@@ -562,3 +562,97 @@ body {
   color: var(--text-secondary);
   margin: 0;
 }
+
+/* Series Sections (Horizontal Scroll) */
+.series-section {
+  margin-bottom: 25px;
+}
+
+.series-section .section-title {
+  margin-bottom: 15px;
+  /* Adjust spacing */
+}
+
+.section-row-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* Keep hidden but use padding to show growth */
+  -webkit-overflow-scrolling: touch;
+  margin: 0 -20px;
+  padding: 20px 20px;
+  /* Increased top/bottom padding for hover growth */
+  scrollbar-width: none;
+}
+
+.section-row-container::-webkit-scrollbar {
+  display: none;
+}
+
+.section-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: nowrap;
+  width: max-content;
+  padding-right: 20px;
+}
+
+/* Horizontal Card Structure */
+.series-card-horizontal {
+  width: 160px;
+  flex-shrink: 0;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.series-thumbnail-wrapper-horizontal {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  background-color: var(--card-bg);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+  /* Smooth pop */
+  transform-origin: center center;
+  z-index: 1;
+}
+
+.series-thumbnail-wrapper-horizontal .series-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Netflix-style Hover Effect: Pop the Wrapper */
+.series-card-horizontal:hover .series-thumbnail-wrapper-horizontal {
+  transform: scale(1.10);
+  /* Grow the container */
+  z-index: 10;
+  /* Bring to front */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  /* Drop shadow */
+}
+
+.series-card-horizontal .series-overlay {
+  /* Reuse overlay styles but ensure they apply */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.2s;
+  justify-content: center;
+  align-items: center;
+}
+
+.series-card-horizontal:hover .series-overlay {
+  opacity: 1;
+}

@@ -7,7 +7,7 @@ const CreatorHomePage = () => {
     const navigate = useNavigate();
 
     const profile = getCreatorProfile(creatorId);
-    const seriesList = getSeriesByCreatorId(creatorId);
+    const allSeries = getSeriesByCreatorId(creatorId);
 
     if (!profile) {
         return (
@@ -16,6 +16,9 @@ const CreatorHomePage = () => {
             </div>
         );
     }
+
+    // Default to "All Series" if no sections defined
+    const sections = profile.sections || [{ title: 'All Series', type: 'all' }];
 
     return (
         <div className="creator-page-wrapper">
@@ -29,38 +32,54 @@ const CreatorHomePage = () => {
                         <div className="creator-stats">
                             <span>Subscribers {profile.stats.subscribers}</span>
                             <span className="separator">•</span>
-                            <span>{seriesList.length} Series</span>
+                            <span>{allSeries.length} Series</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Separator Line */}
             <hr className="content-separator" />
 
-            {/* Series List Section */}
+            {/* Sections */}
             <div className="creator-content">
-                <h2 className="section-title">Series</h2>
-                <div className="series-grid">
-                    {seriesList.map((series) => (
-                        <div
-                            key={series.id}
-                            className="series-card"
-                            onClick={() => navigate(`/${creatorId}/${series.id}`)}
-                        >
-                            <div className="series-thumbnail-wrapper">
-                                <img src={series.thumbnailUrl} alt={series.title} className="series-thumbnail" />
-                                <div className="series-overlay">
-                                    <span className="play-icon">▶</span>
+                {sections.map((section, index) => {
+                    let sectionSeries = [];
+                    if (section.type === 'all') {
+                        sectionSeries = allSeries;
+                    } else if (section.type === 'genre') {
+                        sectionSeries = allSeries.filter(s => s.genre === section.value);
+                    }
+
+                    if (sectionSeries.length === 0) return null;
+
+                    return (
+                        <div key={index} className="series-section">
+                            <h2 className="section-title">{section.title}</h2>
+                            <div className="section-row-container">
+                                <div className="section-row">
+                                    {sectionSeries.map((series) => (
+                                        <div
+                                            key={series.id}
+                                            className="series-card-horizontal"
+                                            onClick={() => navigate(`/${creatorId}/${series.id}`)}
+                                        >
+                                            <div className="series-thumbnail-wrapper-horizontal">
+                                                <img src={series.thumbnailUrl} alt={series.title} className="series-thumbnail" />
+                                                <div className="series-overlay">
+                                                    <span className="play-icon">▶</span>
+                                                </div>
+                                            </div>
+                                            <div className="series-card-info">
+                                                <h3 className="series-card-title">{series.title}</h3>
+                                                <p className="series-card-meta">{series.totalVideos} Videos</p>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
-                            <div className="series-card-info">
-                                <h3 className="series-card-title">{series.title}</h3>
-                                <p className="series-card-meta">{series.totalVideos} Videos</p>
-                            </div>
                         </div>
-                    ))}
-                </div>
+                    );
+                })}
             </div>
         </div>
     );

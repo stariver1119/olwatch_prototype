@@ -8,6 +8,7 @@ export const seriesList = [
     thumbnailUrl: 'https://img.youtube.com/vi/HzFB_j4yuik/hqdefault.jpg',
     totalVideos: 4,
     totalViews: '1.5k',
+    genre: 'vlog',
     tags: ['입시', '대학', '면접'],
     videos: [
       {
@@ -49,6 +50,7 @@ export const seriesList = [
     thumbnailUrl: 'https://i.ytimg.com/vi/AK35ZLD_9hI/hqdefault.jpg',
     totalVideos: 3,
     totalViews: '113',
+    genre: 'talk',
     tags: ['일상', '토크', '수건'],
     videos: [
       {
@@ -86,7 +88,11 @@ export const creatorProfiles = {
       totalViews: '1.6k',
       subscribers: '150',
       totalSeries: 2
-    }
+    },
+    sections: [
+      { title: 'All Series', type: 'all' },
+      { title: 'Talk Series', type: 'genre', value: 'talk' }
+    ]
   }
 };
 

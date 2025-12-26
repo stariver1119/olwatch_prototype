@@ -12,6 +12,7 @@ This document summarizes the current state of the OLWatch prototype and outlines
 - **v0.1.3**: Second Series & URL Refinement (`/:creatorId/:seriesId`).
 - **v0.2.0**: Creator Home Page (Profile, Series Grid).
 - **v0.2.1**: Creator Home Refinement (Genre Sections, Horizontal Scroll, Netflix-style Hover).
+- **v0.2.2**: Styling detail fix (Episode Number Styling_serieslistpage, Play Icon Inconsistency_creatorhomepage).
 
 ### 🚧 In Progress / 진행 중
 - **v0.3.0 Preparation / v0.3.0 준비**

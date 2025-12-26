@@ -549,9 +549,12 @@ body {
 }
 
 .play-icon {
-  font-size: 1.5rem;
+  width: 2rem;
+  /* Adjusted for SVG sizing */
+  height: 2rem;
   color: white;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
+  /* SVG shadow equivalent */
 }
 
 .series-card-info {

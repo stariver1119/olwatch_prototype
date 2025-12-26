@@ -66,7 +66,14 @@ const CreatorHomePage = () => {
                                             <div className="series-thumbnail-wrapper-horizontal">
                                                 <img src={series.thumbnailUrl} alt={series.title} className="series-thumbnail" />
                                                 <div className="series-overlay">
-                                                    <span className="play-icon">▶</span>
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 24 24"
+                                                        fill="currentColor"
+                                                        className="play-icon"
+                                                    >
+                                                        <path d="M8 5v14l11-7z" />
+                                                    </svg>
                                                 </div>
                                             </div>
                                             <div className="series-card-info">

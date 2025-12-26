@@ -58,9 +58,14 @@ This document summarizes the current state of the OLWatch prototype and outlines
 - **Goal**: google analytics implementation.
 - **목표**: 구글 애널리틱스 적용.
 
-### 🔹 v0.8.0: 구글 애널리틱스 적용
-- **Goal**: google analytics implementation.
-- **목표**: 구글 애널리틱스 적용.
+### 🔹 v0.8.0: 영어 지원 (글로벌화)
+- **Goal**: global support.
+- **목표**: 영어 지원 (글로벌화).
+
+### 🔹 v0.9.0: 모바일 앱 개발 시작 (Hybrid Architecture)
+- **Goal**: Kickoff Mobile App Development (React Native + Native Player).
+- **목표**: 모바일 앱 개발 착수 (하이브리드 아키텍처: React Native + Native Player).
+- **Details**: Refer to `about_app_dev.md` for strategy.
 
 ### 🔹 Backlog / 백로그 (Postponed)
 - **v0.1.2: Adaptive UI / 반응형 UI**

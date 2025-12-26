@@ -7,10 +7,10 @@ const VideoCard = ({ video, index }) => {
     return (
         <Link to={`/watch/${video.id}`} className="video-card-link">
             <div className="video-card">
-                <div className="video-index-container">
-                    <span className="video-index-large">{index + 1}</span>
-                </div>
                 <div className="video-thumbnail-wrapper">
+                    <div className="video-index-container">
+                        <span className="video-index-large">{index + 1}</span>
+                    </div>
                     <img src={thumbnailUrl} alt={video.title} className="video-thumbnail" />
                 </div>
                 <div className="video-info">
